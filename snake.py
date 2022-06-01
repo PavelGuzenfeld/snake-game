@@ -79,10 +79,8 @@ class Snake:
 
     def is_self_collided(self):
         head = self.snake_segments[-1]
-        size = len(self.snake_segments) - 2
-        for i in range(size):
-            print(np.equal(head, self.snake_segments[i]))
-            equal = np.all(np.equal(head, self.snake_segments[i]))
+        for segment in self.snake_segments[:-1]:
+            equal = np.all(np.equal(head, segment))
             if equal:
                 return True
             else:
