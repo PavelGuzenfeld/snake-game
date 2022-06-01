@@ -63,7 +63,6 @@ class Snake:
     def is_food_found(self, a_food):
         head = self.snake_segments[-1]
         d = distance.euclidean(head, a_food)
-        print(d)
         if d < 20:
             return True
         else:
@@ -71,8 +70,6 @@ class Snake:
 
     def is_out_of_bounds(self):
         head = self.snake_segments[-1]
-        print(head)
-        print(self.bounds)
         x_condition = abs(head[0] - self.bounds[0]) < 5 or head[0] < 0
         y_condition = abs(head[1] - self.bounds[1]) < 5 or head[1] < 0
         return x_condition or y_condition
