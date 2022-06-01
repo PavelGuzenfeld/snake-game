@@ -1,8 +1,8 @@
-from snake_game import SnakeGame
+from game import Game
 
 
 def main():
-    snake = SnakeGame()
+    snake = Game()
     snake.run()
 
 
